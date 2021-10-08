@@ -1,0 +1,48 @@
+(1st)mkdir sales
+ cd sales
+mkdir location 1
+cd location1
+touch sales1 sales2 sales3
+mkdir location2
+ cd location2
+ touch pur1 pur2
+mkdir location3
+ cd location3
+ touch stock1 stock2
+ cat pur1 pur2 >> pur3
+
+(2)cp -r pur3 ~/sales/location3/stock3
+
+(3)chmod a+x stock3
+
+(4)head -10 stock1
+
+(5)ls -R
+
+(2nd)echo "Menu"
+echo "1.Volume of Sphere"
+echo "2.Volume of Cube"
+echo "3.Volume of Cylinder"
+echo "Enter the choice"
+read ch
+case $ch in
+    1)echo "Enter the radius of sphere"
+      read r
+      volume=$(( 4*314*r*r*r/300 ))
+      echo "The Volume of the Sphere is $volume";;
+    2)echo "Enter the side"
+      read a
+      volume=$(( a*a*a ))
+      echo "The Volume of the Cube is $volume";;
+    3)echo "Enter the radius of the cylinder"
+      read r
+      echo "Enter the height of the cylinder"
+      read h
+      volume=$(( 314*r*r*h/100 ))
+      echo "The Volume of the Cylinder is $volume";;
+esac
+
+    
+    
+    
+
